@@ -1,3 +1,3 @@
-# full-stack-project
+# meta
 
-Project
+Full Stack project

@@ -1,0 +1,17 @@
+{
+  "name": "",
+  "version": "1.0.0",
+  "description": "Full Stack Project",
+  "scripts": {
+    "api-i": "docker-compose run --rm api npm i",
+    "client-i": "docker-compose run --rm client npm i"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "husky": "1.0.0-rc.15",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.15.3"
+  }
+}

@@ -6,7 +6,7 @@ export const patchPackage = (packageJson: any) => {
       },
     },
     'lint-staged': {
-      '*.{ts,tsx,scss,md,css,json}': ['prettier --write', 'git add'],
+      '*.{ts,tsx,scss,md,css,json,yml}': ['prettier --write', 'git add'],
     },
   }
 

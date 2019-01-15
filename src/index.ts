@@ -7,6 +7,7 @@ import * as path from 'path'
 import { setupBackend } from './backend'
 import { setupFrontend } from './frontend'
 import { exec } from 'shelljs';
+import { setupMeta } from './meta';
 
 interface Options {
   name: string
@@ -62,11 +63,8 @@ export const run = async () => {
   const sourceDir = __dirname
   const targetDir = path.resolve(name)
 
-  console.log('Copying common files...')
-  await fs.copy(path.join(sourceDir, '../src/templates/common'), targetDir)
-  await fs.copy(path.join(sourceDir, '../src/templates/meta'), targetDir)
-
-  exec(`cd "${targetDir}" && git init`)
+  console.log('Setting up meta...')
+  setupMeta({ name, sourceDir, targetDir })
 
   if (backend !== 'None') {
     console.log('Setting up backend...')
